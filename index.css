@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-image: url(images/table.png);
+    background-color: darkgreen;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+p {
+   font-size: 1.6rem; 
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player-one-section {
+    order: 2;
+    display: flex;
+    align-self: center;
+}
+
+#player-two-section {
+    order: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: center;
+}
+
+#player-one-cards {
+    display: flex;
+    flex-direction: row;
+}
+
+#player-two-cards {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card-slot {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 120px;
+    width: calc(120px * 5 / 7);
+}
+
+img.card {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: black;
+    color: #fff;
+    padding: 1.2em;
+}
+
+.buttons {
+    align-self: center;
+}
