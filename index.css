@@ -8,10 +8,26 @@ body {
     background-image: url(images/table.png);
     background-color: darkgreen;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     min-height: 100vh;
+    display: grid;
+    grid-template-columns: 2em auto;
+    grid-auto-columns: auto;
+    grid-template-rows: 2em auto;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+        ". header header"
+        ". . ."
+        ". . ."
+        ". content content"
+        ". footer footer";
+}
+
+.text {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
 }
 
 h1 {
@@ -29,33 +45,12 @@ p {
    font-size: 1.6rem; 
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#player-one-section {
-    order: 2;
-    display: flex;
-    align-self: center;
-}
-
-#player-two-section {
-    order: 1;
-    display: flex;
-    flex-direction: row-reverse;
-    align-self: center;
-}
-
 #player-one-cards {
     display: flex;
-    flex-direction: row;
 }
 
 #player-two-cards {
     display: flex;
-    flex-direction: row-reverse;
 }
 
 .card-slot {
@@ -83,4 +78,5 @@ button {
 
 .buttons {
     align-self: center;
+    grid-area: footer;
 }
